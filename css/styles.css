@@ -81,7 +81,10 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-email-telefon);
-  /* color: #757575; */
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu.open::after {
@@ -259,6 +262,10 @@ ul {
   padding-bottom: 6px;
   padding-left: 22px;
   cursor: pointer;
+
+  transition: box-shadow, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-button:hover,
@@ -286,6 +293,7 @@ ul {
 }
 /*невидимый текст, который будет появляться*/
 .work-invisible {
+  margin: 0;
   font-size: 18px;
   line-height: 1.55;
   color: var(--text-on-background);
@@ -296,10 +304,28 @@ ul {
   width: 370px;
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
-  padding-top: 63px;
+  /* padding-top: 63px; */
   padding-left: 24px;
   padding-right: 24px;
+  /* overflow: hidden; */
+  top: 0;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /*Центрируем текст*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: relative;
   overflow: hidden;
+}
+
+.content-portfolio-list a:hover .work-invisible,
+.content-portfolio-list a:focus .work-invisible {
+  transform: translateY(0);
 }
 
 /*Стилизация списков*/
@@ -402,12 +428,20 @@ ul {
   line-height: 1.14;
   font-weight: 500;
   font-size: 14px;
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-navigation-icon {
   margin-right: 10px;
   fill: var(--header-email-telefon);
   vertical-align: middle;
+
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /******* секция about us*********/
@@ -664,7 +698,9 @@ ul {
 }
 
 .content-portfolio-list-img {
-  /* margin-bottom: 20px; */
+  display: block;
+  width: 370px;
+  height: 294px;
 }
 
 .content-portfolio-img .work-name {
