@@ -289,7 +289,17 @@ ul {
   font-size: 18px;
   line-height: 1.55;
   color: var(--text-on-background);
-  display: none;
+  /* display: none; */
+  position: absolute;
+  /* opacity: 0; */
+  /* pointer-events: none; */
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding-top: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow: hidden;
 }
 
 /*Стилизация списков*/
