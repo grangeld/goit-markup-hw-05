@@ -348,9 +348,11 @@ ul {
 .footer {
   background-color: #2f303a;
 }
+
 .section-list-name {
   background-color: #f5f4fa;
 }
+
 .list-name-social-network {
   display: inline-flex;
   justify-content: center;
@@ -358,20 +360,24 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .list-name-social-network:hover,
 .list-name-social-network:focus {
   background-color: #2196f3;
-  /* fill: #ffffff; */
 }
+
 .list-name-social-network:hover .list-name-icon,
 .list-name-social-network:focus .list-name-icon {
   fill: #ffffff;
 }
+
 .list-name-icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Разметка блоков */
